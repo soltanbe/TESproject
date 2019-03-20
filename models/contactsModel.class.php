@@ -79,7 +79,7 @@ class contactsModel
           $where='';
           $params=array();
         if(!empty($post['search']['value'])){
-            $where.=" AND (phone LIKE ? OR first_name LIKE ? OR last_name=? OR email=?) ";
+            $where.=" AND (phone LIKE ? OR first_name LIKE ? OR last_name LIKE ? OR email LIKE ?) ";
             $s=trim($post['search']['value']);
             $params[]="%$s%";
             $params[]="%$s%";
